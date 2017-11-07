@@ -17,6 +17,7 @@
   },
   "scripts": {
     "prepublish": "coffee -c -o lib src",
+    "install": "coffee -c -o lib src",
     "pretest": "coffee -c -o lib src",
     "test": "mocha --globals exists --timeout 10000 --require spec/lib.js spec/**/*.coffee",
     "coverage": "jscov src .cov && JSCOV=.cov mocha --globals exists --timeout 10000 --require spec/lib.js --compilers coffee:coffee-script/register --reporter mocha-term-cov-reporter spec/**/*.coffee"
